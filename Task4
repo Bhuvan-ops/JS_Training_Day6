@@ -1,0 +1,8 @@
+function makeGreeting() {
+    return function(name) {
+        console.log("Hello, " + name + "!");
+    };
+}
+const greet = makeGreeting();
+let name = prompt("Enter a name : ")
+greet(name);
