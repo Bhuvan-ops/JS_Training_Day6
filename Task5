@@ -1,0 +1,8 @@
+function applyTwice(func,n){
+    return func(func(n));
+}
+function square(n) {
+    return n * n;
+}
+const result = applyTwice(square, 5);
+console.log(result);
