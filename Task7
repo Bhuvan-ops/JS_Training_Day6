@@ -1,0 +1,36 @@
+function processString(str) {
+    let a = str.trim();
+    console.log("Trim : ",a);
+    
+    let b = str.toLowerCase();
+    console.log("Convert to Lowercase : ",b);
+    
+    let c = str.replaceAll("aeiouAEIOU","*");
+    console.log("Replace Vowels : ",c);
+    
+    let d = str.split("").reverse().join("");
+    console.log("Reverse : ",d)
+    
+    let e;
+    if(str.length >=2 && str.length >=8){
+        e = str.substring(2,8)
+    }else{
+        e = str.split("").reverse().join("");
+    }
+    console.log("Extract Substring : ",e)
+    
+    let f;
+    if(str.split("").reverse().join("") === str){
+        console.log("Check Palindrome : Its a palindrome")
+    }else{
+        console.log("Check Palindrome : Its not a palindrome")
+    }
+
+    const g = {};
+    for (const char of str) {
+        g[char] = (g[char] || 0) + 1;
+    }
+    console.log("Character Frequency : ",g);
+}
+const str = prompt("Enter the string value : ");
+let output = processString(str);
